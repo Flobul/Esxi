@@ -1,0 +1,299 @@
+<div id="plugin_container" class="eqLogic-widget eqLogic allowResize" style="width:#width#;height:#height#;border:#border#;border-radius:#border-radius#;background-color: #background-color#;color: #color#; #style#" data-category="" data-eqLogic_id="#id#" data-version="#version#" >
+   <center class="widget-name"><strong><a href="#eqLink#" style="font-size : 1.1em;#hideEqLogicName#">#name_display#</strong></a>
+   	<span style="font-size: 0.85em;position: relative;top:-2px;">#object_name#</span>
+		<span title="Eteindre l'équipement" class="poweroff tooltips" data-type="action" data-subtype="other" data-cmd_id="#cmd_poweroff_id#" style="float: right">
+			<a class="action" style="cursor: pointer;"><i class="fa fa-power-off" style="font-size : 1.0em;padding-right:10px"></i></a>
+
+		<script>
+		$('.poweroff[data-cmd_id=#cmd_poweroff_id#] .action').on('click', function() {
+			bootbox.confirm('Etes-vous sûr de vouloir éteindre l\'équipement #name# ?', function (result) {
+				if (result) {
+					jeedom.cmd.execute({id: '#cmd_poweroff_id#'});
+				}
+			});
+		});
+		</script>
+		</span>
+		<span title="Redémarrer l'équipement" class="reboot tooltips" data-type="action" data-subtype="other" data-cmd_id="#cmd_reboot_id#" style="float: right">
+			<a class="action" style="cursor: pointer;"><i class="fa fa-repeat" style="font-size : 1.0em;padding-right:10px"></i></a>
+		<script>
+		$('.reboot[data-cmd_id=#cmd_reboot_id#] .action').on('click', function() {
+			bootbox.confirm('Etes-vous sûr de vouloir redémarrer l\'équipement #name# ?', function (result) {
+				if (result) {
+					jeedom.cmd.execute({id: '#cmd_reboot_id#'});
+				}
+			});
+		});
+		</script>
+		</span>
+		<span id="iconSSH#id#" style="float: right;width:25px"></span>
+		<script>
+			if ('#cnx_ssh#' == 'OK') {
+				$('#iconSSH#id#').append('<i title="Connexion SSH OK" class="fa fa-check tooltips" style="font-size : 1.1em;color: #00FF00;" ></i>');
+			}
+			if ('#cnx_ssh#' == 'KO') {
+				$('#iconSSH#id#').append('<i title="Connexion SSH KO" class="fa fa-times tooltips" style="font-size : 1.1em;color: #FF0000;"></i>');
+			}
+		</script>
+</center>
+
+	<div class="tooltips" data-cmd_id="#namedistriid#" style="margin-left:5px;display: #namedistri_display#;">
+			<span title="Distribution Linux" class="fa fa-linux" style="min-width:15px"></span>
+			<span>#namedistri#</span>
+	</div>
+	<div class="tooltips" data-cmd_id="#uptimeid#" style="margin-left:5px;display: #uptime_display#;">
+			<span title="Temps d'activité (uptime)" class="fa fa-tachometer" style="min-width:15px;"></span>
+			<span id="uptime#id#"></span>
+	</div>
+	<script>
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+			$('#uptime#id#').append('<span>#uptime#</span>');
+		}
+    </script>
+	<div class="tooltips" style="margin-left:5px;display: #loadavg_display#;">
+			<span title="Charge système (load average)" class="fa techno-courbes3" style="width:15px;"></span>
+			<span id="loadavg1mn#id#"></span><span id="loadavg5mn#id#"></span><span id="loadavg15mn#id#"></span>
+	</div>
+	<script>
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+			if ('#loadavg1mn#' == '') {
+				$('#loadavg1mn#id#').append('<span></span>');
+			}else if ('#loadavg1mn#' < '#loadavg1mnvertinfa#') {
+				$('#loadavg1mn#id#').append('1min : <span data-cmd_id="#loadavg1mnid#" class="history cursor" style="color: #00FF00;" >#loadavg1mn#</span>');
+			}else if ('#loadavg1mn#' >= '#loadavg1mnorangede#' && '#loadavg1mn#' <= '#loadavg1mnorangea#') {
+				$('#loadavg1mn#id#').append('1min : <span data-cmd_id="#loadavg1mnid#" class="history cursor" style="color: #FF8000;" >#loadavg1mn#</span>');
+			}else if ('#loadavg1mn#' > '#loadavg1mnrougesupa#' && '#loadavg1mnrougesupa#' !== '') {
+				$('#loadavg1mn#id#').append('1min : <span data-cmd_id="#loadavg1mnid#" class="history cursor" style="color: #FF0000;" >#loadavg1mn#</span>');
+			}else {
+				$('#loadavg1mn#id#').append('1min : <span data-cmd_id="#loadavg1mnid#" class="history cursor">#loadavg1mn#</span>');
+			}
+
+			if ('#loadavg5mn#' == '#loadavg5mnvertinfa#') {
+				$('#loadavg5mn#id#').append('<span></span>');
+			}else if ('#loadavg5mn#' < '#loadavg5mnvertinfa#') {
+				$('#loadavg5mn#id#').append(' - 5min : <span data-cmd_id="#loadavg5mnid#" class="history cursor" style="color: #00FF00;" >#loadavg5mn#</span>');
+			}else if ('#loadavg5mn#' >= '#loadavg5mnorangede#' && '#loadavg5mn#' <= '#loadavg5mnorangea#') {
+				$('#loadavg5mn#id#').append(' - 5min : <span data-cmd_id="#loadavg5mnid#" class="history cursor" style="color: #FF8000;" >#loadavg5mn#</span>');
+			}else if ('#loadavg5mn#' > '#loadavg5mnrougesupa#' && '#loadavg5mnrougesupa#' !== '') {
+				$('#loadavg5mn#id#').append(' - 5min : <span data-cmd_id="#loadavg5mnid#" class="history cursor" style="color: #FF0000;" >#loadavg5mn#</span>');
+			}else {
+				$('#loadavg5mn#id#').append(' - 5min : <span data-cmd_id="#loadavg5mnid#" class="history cursor">#loadavg5mn#</span>');
+			}
+			if ('#loadavg15mn#' == '') {
+				$('#loadavg15mn#id#').append('<span></span>');
+			}else if ('#loadavg15mn#' < '#loadavg15mnvertinfa#') {
+				$('#loadavg15mn#id#').append(' - 15min : <span data-cmd_id="#loadavg15mnid#" class="history cursor" style="color: #00FF00;" >#loadavg15mn#</span>');
+			}else if ('#loadavg15mn#' >= '#loadavg15mnorangede#' && '#loadavg15mn#' <= '#loadavg15mnorangea#') {
+				$('#loadavg15mn#id#').append(' - 15min : <span data-cmd_id="#loadavg15mnid#" class="history cursor" style="color: #FF8000;" >#loadavg15mn#</span>');
+			}else if ('#loadavg15mn#' > '#loadavg15mnrougesupa#' && '#loadavg15mnrougesupa#' !== '') {
+				$('#loadavg15mn#id#').append(' - 15min : <span data-cmd_id="#loadavg15mnid#" class="history cursor" style="color: #FF0000;" >#loadavg15mn#</span>');
+			}else {
+				$('#loadavg15mn#id#').append(' - 15min : <span data-cmd_id="#loadavg15mnid#" class="history cursor">#loadavg15mn#</span>');
+			}
+		}
+    </script>
+	<div class="tooltips" data-cmd_id="#DISK0id#" style="margin-left:5px;display: #DISK0_display#;">
+			<span title="Disque dur 0" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK0#id#"></span><span id="HEALTH0#id#"></span><span id="HOURS0#id#"></span><span id="TEMP0#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK1id#" style="margin-left:5px;display: #DISK1_display#;">
+			<span title="Disque dur 1" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK1#id#"></span><span id="HEALTH1#id#"></span><span id="HOURS1#id#"></span><span id="TEMP1#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK2id#" style="margin-left:5px;display: #DISK2_display#;">
+			<span title="Disque dur 2" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK2#id#"></span><span id="HEALTH2#id#"></span><span id="HOURS2#id#"></span><span id="TEMP2#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK3id#" style="margin-left:5px;display: #DISK3_display#;">
+			<span title="Disque dur 3" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK3#id#"></span><span id="HEALTH3#id#"></span><span id="HOURS3#id#"></span><span id="TEMP3#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK4id#" style="margin-left:5px;display: #DISK4_display#;">
+			<span title="Disque dur 4" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK4#id#"></span><span id="HEALTH4#id#"></span><span id="HOURS4#id#"></span><span id="TEMP4#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK5id#" style="margin-left:5px;display: #DISK5_display#;">
+			<span title="Disque dur 5" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK5#id#"></span><span id="HEALTH5#id#"></span><span id="HOURS5#id#"></span><span id="TEMP5#id#"></span>
+	</div>
+      	<script>
+			/*var tr ='<div class="tooltips" data-cmd_id="#DISK2id#" style="margin-left:5px;display: #DISK2_display#;">';
+			    tr +=' <span title="Disque dur 2" class="fa fa-hdd-o" style="width:15px;"></span>';
+				tr +=' <span id="DISK2#id#"></span><span id="HEALTH2#id#"></span><span id="HOURS2#id#"></span><span id="TEMP2#id#"></span></div>';
+	    $('#DISK1#id#').append(tr);*/
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+				$('#DISK0#id#').append("<span>#DISK0# </span>");
+				if ('#HEALTH0#' != '') {
+					if ('#HEALTH0#' == 'OK') {
+						$('#HEALTH0#id#').append(' : <span data-cmd_id="#HEALTH0id#" class="history cursor" style="color: #00FF00;" >#HEALTH0#</span>');
+					}else {
+						$('#HEALTH0#id#').append(' : <span data-cmd_id="#HEALTH0id#" class="history cursor" style="color: #FF0000;" >#HEALTH0#</span>');
+					}
+				}
+				$('#HOURS0#id#').append(' - <span>#HOURS0#</span> h ');          
+				if ('#TEMP0#' != '') {
+					if ('#TEMP0#' < '#TEMP0vertinfa#') {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #00FF00;" >#TEMP0#°C</span>)');
+					}else if ('#TEMP0#' >= '#TEMP0orangede#' && '#TEMP0#' <= '#TEMP0orangea#') {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #FF8000;" >#TEMP0#°C</span>)');
+					}else if ('#TEMP0#' > '#TEMP0rougesupa#' && '#TEMP0rougesupa#' != '') {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #FF0000;" >#TEMP0#°C</span>)');
+					}else {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor">#TEMP0#°C</span>)');
+					}
+				}
+				$('#DISK1#id#').append('<span>#DISK1#</span>');
+				if ('#HEALTH1#' != '') {
+					if ('#HEALTH1#' == 'OK') {
+						$('#HEALTH1#id#').append(' : <span data-cmd_id="#HEALTH1id#" class="history cursor" style="color: #00FF00;" >#HEALTH1#</span>');
+					}else {
+						$('#HEALTH1#id#').append(' : <span data-cmd_id="#HEALTH1id#" class="history cursor" style="color: #FF0000;" >#HEALTH1#</span>');
+					}
+				}
+				$('#HOURS1#id#').append(' - <span>#HOURS1#</span> h ');          
+				if ('#TEMP1#' != '') {
+					if ('#TEMP1#' < '#TEMP1vertinfa#') {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #00FF00;" >#TEMP1#°C</span>)');
+					}else if ('#TEMP1#' >= '#TEMP1orangede#' && '#TEMP1#' <= '#TEMP1orangea#') {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #FF8000;" >#TEMP1#°C</span>)');
+					}else if ('#TEMP1#' > '#TEMP1rougesupa#' && '#TEMP1rougesupa#' != '') {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #FF0000;" >#TEMP1#°C</span>)');
+					}else {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor">#TEMP1#°C</span>)');
+					}
+				}
+				$('#DISK2#id#').append('<span>#DISK2#</span>');
+				if ('#HEALTH2#' != '') {
+					if ('#HEALTH2#' == 'OK') {
+						$('#HEALTH2#id#').append(' : <span data-cmd_id="#HEALTH2id#" class="history cursor" style="color: #00FF00;" >#HEALTH2#</span>');
+					}else {
+						$('#HEALTH2#id#').append(' : <span data-cmd_id="#HEALTH2id#" class="history cursor" style="color: #FF0000;" >#HEALTH2#</span>');
+					}
+				}
+				$('#HOURS2#id#').append(' - <span>#HOURS2#</span> h ');          
+				if ('#TEMP2#' != '') {
+					if ('#TEMP2#' < '#TEMP2vertinfa#') {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #00FF00;" >#TEMP2#°C</span>)');
+					}else if ('#TEMP2#' >= '#TEMP2orangede#' && '#TEMP2#' <= '#TEMP2orangea#') {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #FF8000;" >#TEMP2#°C</span>)');
+					}else if ('#TEMP2#' > '#TEMP2rougesupa#' && '#TEMP2rougesupa#' != '') {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #FF0000;" >#TEMP2#°C</span>)');
+					}else {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor">#TEMP2#°C</span>)');
+					}
+				}
+				$('#DISK3#id#').append('<span>#DISK3#</span>');
+				if ('#HEALTH3#' != '') {
+					if ('#HEALTH3#' == 'OK') {
+						$('#HEALTH3#id#').append(' : <span data-cmd_id="#HEALTH3id#" class="history cursor" style="color: #00FF00;" >#HEALTH3#</span>');
+					}else {
+						$('#HEALTH3#id#').append(' : <span data-cmd_id="#HEALTH3id#" class="history cursor" style="color: #FF0000;" >#HEALTH3#</span>');
+					}
+				}
+				$('#HOURS3#id#').append(' - <span>#HOURS3#</span> h ');          
+				if ('#TEMP3#' != '') {
+					if ('#TEMP3#' < '#TEMP3vertinfa#') {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #00FF00;" >#TEMP3#°C</span>)');
+					}else if ('#TEMP3#' >= '#TEMP3orangede#' && '#TEMP3#' <= '#TEMP3orangea#') {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #FF8000;" >#TEMP3#°C</span>)');
+					}else if ('#TEMP3#' > '#TEMP3rougesupa#' && '#TEMP3rougesupa#' != '') {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #FF0000;" >#TEMP3#°C</span>)');
+					}else {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor">#TEMP3#°C</span>)');
+					}
+				}
+				$('#DISK4#id#').append('<span>#DISK4#</span>');
+				if ('#HEALTH4#' != '') {
+					if ('#HEALTH4#' == 'OK') {
+						$('#HEALTH4#id#').append(' : <span data-cmd_id="#HEALTH4id#" class="history cursor" style="color: #00FF00;" >#HEALTH4#</span>');
+					}else {
+						$('#HEALTH4#id#').append(' : <span data-cmd_id="#HEALTH4id#" class="history cursor" style="color: #FF0000;" >#HEALTH4#</span>');
+					}
+				}
+				$('#HOURS4#id#').append(' - <span>#HOURS4#</span> h ');          
+				if ('#TEMP4#' != '') {
+					if ('#TEMP4#' < '#TEMP4vertinfa#') {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #00FF00;" >#TEMP4#°C</span>)');
+					}else if ('#TEMP4#' >= '#TEMP4orangede#' && '#TEMP4#' <= '#TEMP4orangea#') {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #FF8000;" >#TEMP4#°C</span>)');
+					}else if ('#TEMP4#' > '#TEMP4rougesupa#' && '#TEMP4rougesupa#' != '') {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #FF0000;" >#TEMP4#°C</span>)');
+					}else {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor">#TEMP4#°C</span>)');
+					}
+				}
+				$('#DISK5#id#').append('<span>#DISK5#</span>');
+				if ('#HEALTH5#' != '') {
+					if ('#HEALTH5#' == 'OK') {
+						$('#HEALTH5#id#').append(' : <span data-cmd_id="#HEALTH5id#" class="history cursor" style="color: #00FF00;" >#HEALTH5#</span>');
+					}else {
+						$('#HEALTH5#id#').append(' : <span data-cmd_id="#HEALTH5id#" class="history cursor" style="color: #FF0000;" >#HEALTH5#</span>');
+					}
+				}
+				$('#HOURS5#id#').append(' - <span>#HOURS5#</span> h ');          
+				if ('#TEMP5#' != '') {
+					if ('#TEMP5#' < '#TEMP5vertinfa#') {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #00FF00;" >#TEMP5#°C</span>)');
+					}else if ('#TEMP5#' >= '#TEMP5orangede#' && '#TEMP5#' <= '#TEMP5orangea#') {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #FF8000;" >#TEMP5#°C</span>)');
+					}else if ('#TEMP5#' > '#TEMP5rougesupa#' && '#TEMP5rougesupa#' != '') {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #FF0000;" >#TEMP5#°C</span>)');
+					}else {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor">#TEMP5#°C</span>)');
+					}
+				}
+		}
+
+    </script>
+
+	<script>
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+			$('#ethernet0#id#').append('<span>#ethernet0#</span>');
+		}
+    </script>
+
+
+	<div class="tooltips" data-cmd_id="#cpu_tempid#" style="margin-left:5px;display: #cpu_display#;">
+			<span title="Nombre CPU, fréquence et température" class="fa techno-pc" style="width:15px;"></span>
+			<span id="cpu#id#"></span><span id="cpu_temp#id#"></span>
+	</div>
+	<script>
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+			if ('#cpu_temp#' != '') {
+				if ('#cpu_temp#' < '#TEMPvertinfa#') {
+					$('#cpu#id#').append('<span>#cpu# </span>');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor" style="color: #00FF00;" >#cpu_temp#°C</span>)');
+				}else if ('#cpu_temp#' >= '#cpu_temporangede#' && '#cpu_temp#' <= '#cpu_temporangea#') {
+					$('#cpu#id#').append('<span>#cpu# </span>');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor" style="color: #FF8000;" >#cpu_temp#°C</span>)');
+				}else if ('#cpu_temp#' > '#cpu_temprougesupa#' && '#cpu_temprougesupa#' != '') {
+					$('#cpu#id#').append('<span>#cpu# </span>');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor" style="color: #FF0000;" >#cpu_temp#°C</span>)');
+				}else {
+					$('#cpu#id#').append('<span>#cpu# </span>');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor">#cpu_temp#°C</span>)');
+				}
+			}else {
+			$('#cpu#id#').append('<span>#cpu#</span>');
+			}
+		}
+
+    </script>
+	<div class="tooltips" data-cmd_id="#perso1id#" style="margin-left:5px;display: #perso1_display#;">
+			<span class="fa" title="#nameperso1#" style="width: 15px;max-width: 15px;max-height: 15px;">#iconeperso1#</span>
+			<span id="uniteperso1#id#"></span>
+	</div>
+	<script>
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+			$('#uniteperso1#id#').append('<span data-cmd_id="#perso1id#" class="history cursor">#perso1##uniteperso1#</span>');
+		}
+    </script>
+
+	<script>
+		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
+			$('#uniteperso2#id#').append('<span data-cmd_id="#perso2id#" class="history cursor">#perso2##uniteperso2#</span>');
+		}
+    </script>
+
+</div>
+

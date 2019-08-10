@@ -4,12 +4,12 @@
 	"description" : "Plugin permettant le monitoring de esxi",
 	"licence" : "AGPL",
 	"author" : "Blackou",
-	"require" : "1.10",
+	"require" : "3.3",
 	"hasDependency" : true,
 	"category" : "monitoring",
 	"language" : ["fr_FR","en_US","de_DE","es_ES"],
 	"compatibility" : ["miniplus","smart","rpi","docker","diy"],
-	"changelog" : "https://surveillancestation.github.io/surveillancestation/monitoring/fr_FR/#tocAnchor-1-10",
-	"documentation" : "https://surveillancestation.github.io/surveillancestation/monitoring/fr_FR/"
+	"changelog" : "",
+	"documentation" : ""
 }
 

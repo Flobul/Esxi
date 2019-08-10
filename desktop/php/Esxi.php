@@ -66,7 +66,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			<div role="tabpanel" class="tab-pane active" id="eqlogictab">
 				<br/>
 				<div class="row">
-					<div class="col-xs-6">
+					<div class="col-xs-8">
 						<form class="form-horizontal">
 						<fieldset>
 							<legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}<i class='fa fa-cogs eqLogicAction pull-right cursor' data-action='configure'></i></legend>
@@ -170,27 +170,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 					</fieldset>
 					</form>
 				</div>
-				<div class="col-xs-6">
-					<form class="form-horizontal">
-					<fieldset>
-						<legend>{{NAS Synology}}</legend>
-						<div class="form-group">
-							<label class="col-md-2 control-label" >{{Activer}}</label>
-							<div class="col-md-8">
-								<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="synology">
-								<span style="font-size: 75%;">({{à cocher seulement si vous désirez Monitorer un NAS Synology}})</span>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-md-2 control-label" >{{Volume 2}}</label>
-							<div class="col-md-8">
-								<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="synologyv2" >
-								<span style="font-size: 75%;">({{à cocher seulement si vous avez un 2ème volume (Volume 2) dans Synology. Le volume 1 est pris en compte par défaut}})</span>
-							</div>
-						</div>
-					</fieldset>
-					</form>
-				</div>
 			</div>
 			</div>
 			<div role="tabpanel" class="tab-pane" id="commandtab">
@@ -219,4 +198,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 
 <?php include_file('desktop', 'Esxi', 'js', 'Esxi'); ?>
 <?php include_file('core', 'plugin.template', 'js'); ?>
+
+
 

@@ -164,7 +164,7 @@ class Esxi extends eqLogic {
 		$EsxiCmd->setSubType('string');
 		$EsxiCmd->save();
 
-        for ($i = 0; $i < 6; $i++) {
+        for ($i = 0; $i < 12; $i++) {
             $EsxiCmd = $this->getCmd(null, 'DISK'.$i);
             if (!is_object($EsxiCmd)) {
                 $EsxiCmd = new EsxiCmd();
@@ -266,9 +266,8 @@ class Esxi extends eqLogic {
 			return $replace;
 		}
 		$_version = jeedom::versionAlias($_version);
-		log::add('Esxi', 'error', 'Diskque '.$nbdisks);
 
-		for ($i = 0; $i < 6; $i++) {
+		for ($i = 0; $i < 12; $i++) {
 			$replace ['#TEMP'.$i.'vertinfa#'] = $this->getConfiguration('TEMP'.$i.'vertinfa');
 			$replace ['#TEMP'.$i.'orangede#'] = $this->getConfiguration('TEMP'.$i.'orangede');
 			$replace ['#TEMP'.$i.'orangea#'] = $this->getConfiguration('TEMP'.$i.'orangea');
@@ -332,7 +331,7 @@ class Esxi extends eqLogic {
 		$replace['#cpu_temp#'] = (is_object($cpu_temp)) ? $cpu_temp->execCmd() : '';
 		$replace['#cpu_tempid#'] = is_object($cpu_temp) ? $cpu_temp->getId() : '';
 
-		for ($i = 0; $i < 6; $i++) {
+		for ($i = 0; $i < 12; $i++) {
 			${"DISK$i"} = $this->getCmd(null,'DISK'.$i);
 			$replace['#DISK'.$i.'#'] = (is_object(${"DISK$i"})) ? ${"DISK$i"}->execCmd() : '';
 			$replace['#DISK'.$i.'id#'] = is_object(${"DISK$i"}) ? ${"DISK$i"}->getId() : '';
@@ -728,4 +727,3 @@ class Esxi extends eqLogic {
   }
 
   ?>
-

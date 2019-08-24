@@ -116,11 +116,31 @@
 			<span title="Disque dur 5" class="fa fa-hdd-o" style="width:15px;"></span>
 			<span id="DISK5#id#"></span><span id="HEALTH5#id#"></span><span id="HOURS5#id#"></span><span id="TEMP5#id#"></span>
 	</div>
+	<div class="tooltips" data-cmd_id="#DISK6id#" style="margin-left:5px;display: #DISK6_display#;">
+			<span title="Disque dur 6" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK6#id#"></span><span id="HEALTH6#id#"></span><span id="HOURS6#id#"></span><span id="TEMP6#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK7id#" style="margin-left:5px;display: #DISK7_display#;">
+			<span title="Disque dur 7" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK7#id#"></span><span id="HEALTH7#id#"></span><span id="HOURS7#id#"></span><span id="TEMP7#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK8id#" style="margin-left:5px;display: #DISK8_display#;">
+			<span title="Disque dur 8" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK8#id#"></span><span id="HEALTH8#id#"></span><span id="HOURS8#id#"></span><span id="TEMP8#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK9id#" style="margin-left:5px;display: #DISK9_display#;">
+			<span title="Disque dur 9" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK9#id#"></span><span id="HEALTH9#id#"></span><span id="HOURS9#id#"></span><span id="TEMP9#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK10id#" style="margin-left:5px;display: #DISK10_display#;">
+			<span title="Disque dur 10" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK10#id#"></span><span id="HEALTH10#id#"></span><span id="HOURS10#id#"></span><span id="TEMP10#id#"></span>
+	</div>
+	<div class="tooltips" data-cmd_id="#DISK11id#" style="margin-left:5px;display: #DISK11_display#;">
+			<span title="Disque dur 11" class="fa fa-hdd-o" style="width:15px;"></span>
+			<span id="DISK11#id#"></span><span id="HEALTH11#id#"></span><span id="HOURS11#id#"></span><span id="TEMP11#id#"></span>
+	</div>
       	<script>
-			/*var tr ='<div class="tooltips" data-cmd_id="#DISK2id#" style="margin-left:5px;display: #DISK2_display#;">';
-			    tr +=' <span title="Disque dur 2" class="fa fa-hdd-o" style="width:15px;"></span>';
-				tr +=' <span id="DISK2#id#"></span><span id="HEALTH2#id#"></span><span id="HOURS2#id#"></span><span id="TEMP2#id#"></span></div>';
-	    $('#DISK1#id#').append(tr);*/
 		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
 				$('#DISK0#id#').append("<span>#DISK0# </span>");
 				if ('#HEALTH0#' != '') {
@@ -130,7 +150,7 @@
 						$('#HEALTH0#id#').append(' : <span data-cmd_id="#HEALTH0id#" class="history cursor" style="color: #FF0000;" >#HEALTH0#</span>');
 					}
 				}
-				$('#HOURS0#id#').append(' - <span>#HOURS0#</span> h ');          
+				$('#HOURS0#id#').append(' - <span>#HOURS0#</span> j ');          
 				if ('#TEMP0#' != '') {
 					if ('#TEMP0#' < '#TEMP0vertinfa#') {
 						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #00FF00;" >#TEMP0#°C</span>)');
@@ -150,7 +170,7 @@
 						$('#HEALTH1#id#').append(' : <span data-cmd_id="#HEALTH1id#" class="history cursor" style="color: #FF0000;" >#HEALTH1#</span>');
 					}
 				}
-				$('#HOURS1#id#').append(' - <span>#HOURS1#</span> h ');          
+				$('#HOURS1#id#').append(' - <span>#HOURS1#</span> j ');          
 				if ('#TEMP1#' != '') {
 					if ('#TEMP1#' < '#TEMP1vertinfa#') {
 						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #00FF00;" >#TEMP1#°C</span>)');
@@ -170,7 +190,7 @@
 						$('#HEALTH2#id#').append(' : <span data-cmd_id="#HEALTH2id#" class="history cursor" style="color: #FF0000;" >#HEALTH2#</span>');
 					}
 				}
-				$('#HOURS2#id#').append(' - <span>#HOURS2#</span> h ');          
+				$('#HOURS2#id#').append(' - <span>#HOURS2#</span> j ');          
 				if ('#TEMP2#' != '') {
 					if ('#TEMP2#' < '#TEMP2vertinfa#') {
 						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #00FF00;" >#TEMP2#°C</span>)');
@@ -190,7 +210,7 @@
 						$('#HEALTH3#id#').append(' : <span data-cmd_id="#HEALTH3id#" class="history cursor" style="color: #FF0000;" >#HEALTH3#</span>');
 					}
 				}
-				$('#HOURS3#id#').append(' - <span>#HOURS3#</span> h ');          
+				$('#HOURS3#id#').append(' - <span>#HOURS3#</span> j ');          
 				if ('#TEMP3#' != '') {
 					if ('#TEMP3#' < '#TEMP3vertinfa#') {
 						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #00FF00;" >#TEMP3#°C</span>)');
@@ -210,7 +230,7 @@
 						$('#HEALTH4#id#').append(' : <span data-cmd_id="#HEALTH4id#" class="history cursor" style="color: #FF0000;" >#HEALTH4#</span>');
 					}
 				}
-				$('#HOURS4#id#').append(' - <span>#HOURS4#</span> h ');          
+				$('#HOURS4#id#').append(' - <span>#HOURS4#</span> j ');          
 				if ('#TEMP4#' != '') {
 					if ('#TEMP4#' < '#TEMP4vertinfa#') {
 						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #00FF00;" >#TEMP4#°C</span>)');
@@ -230,7 +250,7 @@
 						$('#HEALTH5#id#').append(' : <span data-cmd_id="#HEALTH5id#" class="history cursor" style="color: #FF0000;" >#HEALTH5#</span>');
 					}
 				}
-				$('#HOURS5#id#').append(' - <span>#HOURS5#</span> h ');          
+				$('#HOURS5#id#').append(' - <span>#HOURS5#</span> j ');          
 				if ('#TEMP5#' != '') {
 					if ('#TEMP5#' < '#TEMP5vertinfa#') {
 						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #00FF00;" >#TEMP5#°C</span>)');
@@ -240,6 +260,126 @@
 						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #FF0000;" >#TEMP5#°C</span>)');
 					}else {
 						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor">#TEMP5#°C</span>)');
+					}
+				}
+				$('#DISK6#id#').append('<span>#DISK6#</span>');
+				if ('#HEALTH6#' != '') {
+					if ('#HEALTH6#' == 'OK') {
+						$('#HEALTH6#id#').append(' : <span data-cmd_id="#HEALTH6id#" class="history cursor" style="color: #00FF00;" >#HEALTH6#</span>');
+					}else {
+						$('#HEALTH6#id#').append(' : <span data-cmd_id="#HEALTH6id#" class="history cursor" style="color: #FF0000;" >#HEALTH6#</span>');
+					}
+				}
+				$('#HOURS6#id#').append(' - <span>#HOURS6#</span> j ');          
+				if ('#TEMP6#' != '') {
+					if ('#TEMP6#' < '#TEMP6vertinfa#') {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor" style="color: #00FF00;" >#TEMP6#°C</span>)');
+					}else if ('#TEMP6#' >= '#TEMP6orangede#' && '#TEMP6#' <= '#TEMP6orangea#') {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor" style="color: #FF8000;" >#TEMP6#°C</span>)');
+					}else if ('#TEMP6#' > '#TEMP6rougesupa#' && '#TEMP6rougesupa#' != '') {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor" style="color: #FF0000;" >#TEMP6#°C</span>)');
+					}else {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor">#TEMP6#°C</span>)');
+					}
+				}
+				$('#DISK7#id#').append('<span>#DISK7#</span>');
+				if ('#HEALTH7#' != '') {
+					if ('#HEALTH7#' == 'OK') {
+						$('#HEALTH7#id#').append(' : <span data-cmd_id="#HEALTH7id#" class="history cursor" style="color: #00FF00;" >#HEALTH7#</span>');
+					}else {
+						$('#HEALTH7#id#').append(' : <span data-cmd_id="#HEALTH7id#" class="history cursor" style="color: #FF0000;" >#HEALTH7#</span>');
+					}
+				}
+				$('#HOURS7#id#').append(' - <span>#HOURS7#</span> j ');          
+				if ('#TEMP7#' != '') {
+					if ('#TEMP7#' < '#TEMP7vertinfa#') {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor" style="color: #00FF00;" >#TEMP7#°C</span>)');
+					}else if ('#TEMP7#' >= '#TEMP7orangede#' && '#TEMP7#' <= '#TEMP7orangea#') {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor" style="color: #FF8000;" >#TEMP7#°C</span>)');
+					}else if ('#TEMP7#' > '#TEMP7rougesupa#' && '#TEMP7rougesupa#' != '') {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor" style="color: #FF0000;" >#TEMP7#°C</span>)');
+					}else {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor">#TEMP7#°C</span>)');
+					}
+				}
+				$('#DISK8#id#').append('<span>#DISK8#</span>');
+				if ('#HEALTH8#' != '') {
+					if ('#HEALTH8#' == 'OK') {
+						$('#HEALTH8#id#').append(' : <span data-cmd_id="#HEALTH8id#" class="history cursor" style="color: #00FF00;" >#HEALTH8#</span>');
+					}else {
+						$('#HEALTH8#id#').append(' : <span data-cmd_id="#HEALTH8id#" class="history cursor" style="color: #FF0000;" >#HEALTH8#</span>');
+					}
+				}
+				$('#HOURS8#id#').append(' - <span>#HOURS8#</span> j ');          
+				if ('#TEMP8#' != '') {
+					if ('#TEMP8#' < '#TEMP8vertinfa#') {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor" style="color: #00FF00;" >#TEMP8#°C</span>)');
+					}else if ('#TEMP8#' >= '#TEMP8orangede#' && '#TEMP8#' <= '#TEMP8orangea#') {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor" style="color: #FF8000;" >#TEMP8#°C</span>)');
+					}else if ('#TEMP8#' > '#TEMP8rougesupa#' && '#TEMP8rougesupa#' != '') {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor" style="color: #FF0000;" >#TEMP8#°C</span>)');
+					}else {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor">#TEMP8#°C</span>)');
+					}
+				}
+				$('#DISK9#id#').append('<span>#DISK9#</span>');
+				if ('#HEALTH9#' != '') {
+					if ('#HEALTH9#' == 'OK') {
+						$('#HEALTH9#id#').append(' : <span data-cmd_id="#HEALTH9id#" class="history cursor" style="color: #00FF00;" >#HEALTH9#</span>');
+					}else {
+						$('#HEALTH9#id#').append(' : <span data-cmd_id="#HEALTH9id#" class="history cursor" style="color: #FF0000;" >#HEALTH9#</span>');
+					}
+				}
+				$('#HOURS9#id#').append(' - <span>#HOURS9#</span> j ');          
+				if ('#TEMP9#' != '') {
+					if ('#TEMP9#' < '#TEMP9vertinfa#') {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor" style="color: #00FF00;" >#TEMP9#°C</span>)');
+					}else if ('#TEMP9#' >= '#TEMP9orangede#' && '#TEMP9#' <= '#TEMP9orangea#') {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor" style="color: #FF8000;" >#TEMP9#°C</span>)');
+					}else if ('#TEMP9#' > '#TEMP9rougesupa#' && '#TEMP9rougesupa#' != '') {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor" style="color: #FF0000;" >#TEMP9#°C</span>)');
+					}else {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor">#TEMP9#°C</span>)');
+					}
+				}
+				$('#DISK10#id#').append('<span>#DISK10#</span>');
+				if ('#HEALTH10#' != '') {
+					if ('#HEALTH10#' == 'OK') {
+						$('#HEALTH10#id#').append(' : <span data-cmd_id="#HEALTH10id#" class="history cursor" style="color: #00FF00;" >#HEALTH10#</span>');
+					}else {
+						$('#HEALTH10#id#').append(' : <span data-cmd_id="#HEALTH10id#" class="history cursor" style="color: #FF0000;" >#HEALTH10#</span>');
+					}
+				}
+				$('#HOURS10#id#').append(' - <span>#HOURS10#</span> j ');          
+				if ('#TEMP10#' != '') {
+					if ('#TEMP10#' < '#TEMP10vertinfa#') {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor" style="color: #00FF00;" >#TEMP10#°C</span>)');
+					}else if ('#TEMP10#' >= '#TEMP10orangede#' && '#TEMP10#' <= '#TEMP10orangea#') {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor" style="color: #FF8000;" >#TEMP10#°C</span>)');
+					}else if ('#TEMP10#' > '#TEMP10rougesupa#' && '#TEMP10rougesupa#' != '') {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor" style="color: #FF0000;" >#TEMP10#°C</span>)');
+					}else {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor">#TEMP10#°C</span>)');
+					}
+				}
+				$('#DISK11#id#').append('<span>#DISK11#</span>');
+				if ('#HEALTH11#' != '') {
+					if ('#HEALTH11#' == 'OK') {
+						$('#HEALTH11#id#').append(' : <span data-cmd_id="#HEALTH11id#" class="history cursor" style="color: #00FF00;" >#HEALTH11#</span>');
+					}else {
+						$('#HEALTH11#id#').append(' : <span data-cmd_id="#HEALTH11id#" class="history cursor" style="color: #FF0000;" >#HEALTH11#</span>');
+					}
+				}
+				$('#HOURS11#id#').append(' - <span>#HOURS11#</span> j ');          
+				if ('#TEMP11#' != '') {
+					if ('#TEMP11#' < '#TEMP11vertinfa#') {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor" style="color: #00FF00;" >#TEMP11#°C</span>)');
+					}else if ('#TEMP11#' >= '#TEMP11orangede#' && '#TEMP11#' <= '#TEMP11orangea#') {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor" style="color: #FF8000;" >#TEMP11#°C</span>)');
+					}else if ('#TEMP11#' > '#TEMP11rougesupa#' && '#TEMP11rougesupa#' != '') {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor" style="color: #FF0000;" >#TEMP11#°C</span>)');
+					}else {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor">#TEMP11#°C</span>)');
 					}
 				}
 		}
@@ -296,4 +436,6 @@
     </script>
 
 </div>
+
+
 

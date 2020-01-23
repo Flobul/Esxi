@@ -1,7 +1,7 @@
 {
 	"id" : "Esxi",
 	"name" : "Esxi",
-	"description" : "Plugin permettant le monitoring de esxi",
+	"description" : "Plugin permettant le monitoring de Esxi",
 	"licence" : "AGPL",
 	"author" : "Flobul",
 	"require" : "3.3",
@@ -11,7 +11,7 @@
 	"compatibility" : ["Jeedomboard","Smart","miniplus","rpi","docker","diy"],
 	"display" : "panel",
 	"mobile" : "panel",
-	"changelog" : "",
-	"documentation" : ""
-}
+	"changelog" : "https://github.com/Flobul/Jeedom-Esxi/blob/master/docs/fr_FR/changelog.md",
+	"documentation" : "https://github.com/Flobul/Jeedom-Esxi/blob/master/docs/fr_FR/index.md",
 
+}

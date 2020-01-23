@@ -1,4 +1,4 @@
-Plugin Optoma
+Plugin Esxi
 =============
 
 ![Logo plugin](../assets/images/esxi_icon.png "Logo plugin")

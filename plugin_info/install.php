@@ -26,7 +26,7 @@ function Esxi_install() {
       $cron->setFunction('pull');
       $cron->setEnable(1);
       $cron->setDeamon(0);
-      $cron->setSchedule('*/15 * * * *');
+      $cron->setSchedule('*/60 * * * *');
       $cron->setTimeout(30);
       $cron->save();
     }
@@ -40,7 +40,7 @@ function Esxi_update() {
       $cron->setFunction('pull');
       $cron->setEnable(1);
       $cron->setDeamon(0);
-      $cron->setSchedule('*/15 * * * *');
+      $cron->setSchedule('*/60 * * * *');
       $cron->setTimeout(30);
       $cron->save();
     }

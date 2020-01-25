@@ -9,8 +9,6 @@
 	"category" : "monitoring",
 	"language" : ["fr_FR","en_US","de_DE","es_ES"],
 	"compatibility" : ["Jeedomboard","Smart","miniplus","rpi","docker","diy"],
-	"display" : "panel",
-	"mobile" : "panel",
 	"changelog" : "https://flobul.github.io/Jeedom-Esxi/fr_FR/changelog",
 	"documentation" : "https://flobul.github.io/Jeedom-Esxi/fr_FR/"
 }

@@ -158,27 +158,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 					</fieldset>
 					</form>
 				</div>
-				<div class="col-xs-6">
-					<form class="form-horizontal">
-					<fieldset>
-						<legend>{{NAS Synology}}</legend>
-						<div class="form-group">
-							<label class="col-md-2 control-label" >{{Activer}}</label>
-							<div class="col-md-8">
-								<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="synology">
-								<span style="font-size: 75%;">({{à cocher seulement si vous désirez Monitorer un NAS Synology}})</span>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-md-2 control-label" >{{Volume 2}}</label>
-							<div class="col-md-8">
-								<input type="checkbox" class="eqLogicAttr" data-l1key="configuration"  data-l2key="synologyv2" >
-								<span style="font-size: 75%;">({{à cocher seulement si vous avez un 2ème volume (Volume 2) dans Synology. Le volume 1 est pris en compte par défaut}})</span>
-							</div>
-						</div>
-					</fieldset>
-					</form>
-				</div>
 			</div>
 			</div>
 			<div role="tabpanel" class="tab-pane" id="commandtab">

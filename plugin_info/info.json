@@ -4,11 +4,11 @@
 	"description" : "Plugin permettant le monitoring de Esxi",
 	"licence" : "AGPL",
 	"author" : "Flobul",
-	"require" : "3.3",
+	"require" : "4.0",
 	"hasDependency" : true,
 	"category" : "monitoring",
 	"language" : ["fr_FR","en_US","de_DE","es_ES"],
 	"compatibility" : ["Jeedomboard","Smart","miniplus","rpi","docker","diy"],
-	"changelog" : "https://flobul.github.io/Jeedom-Esxi/fr_FR/changelog",
-	"documentation" : "https://flobul.github.io/Jeedom-Esxi/fr_FR/"
+	"changelog" : "https://flobul.github.io/Jeedom-Esxi/#language#/changelog",
+	"documentation" : "https://flobul.github.io/Jeedom-Esxi/#language#/"
 }

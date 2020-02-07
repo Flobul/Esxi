@@ -1,6 +1,6 @@
 <div class="eqLogic eqLogic-widget col2" style="width:#width#;height:#height#;border:#border#;border-radius:#border-radius#;background-color: #background-color#;color: #color#; #style#" data-category="" data-eqLogic_id="#id#" data-version="mobile" >
-   <center  style="#hideEqLogicName#"><strong>#name_display#</strong>
-   	<span style="font-size: 0.85em;position: relative;top:-2px;">#object_name#</span>
+   <center class="widget-name" style="#hideEqLogicName#"><strong>#name_display#</strong>
+	<span style="font-size: 0.85em;display:none;">#object_name#</span></a></span>
 		<span id="iconSSH#id#" style="float: right;width:25px"></span>
 		<script>
 			if ('#cnx_ssh#' == 'OK') {
@@ -12,11 +12,11 @@
 		</script>
 </center>
 	<div class="cmd tooltips" style="margin-left:5px;display: #namedistri_display#;">
-			<span title="Distribution Linux" class="fa fa-linux" style="min-width:15px"></span>
+			<span title="Distribution Linux" class="fab fa-linux" style="min-width:15px"></span>
 			<span>#namedistri#</span>
 	</div>
 	<div class="cmd tooltips" style="margin-left:5px;display: #uptime_display#;">
-			<span title="Temps d'activité (uptime)" class="fa fa-tachometer" style="min-width:15px"></span>
+			<span title="Temps d'activité (uptime)" class="fas fa-tachometer-alt" style="min-width:15px;"></span>
 			<span id="uptime#id#"></span>
 	</div>
 	<script>
@@ -25,7 +25,7 @@
 		}
     </script>
 	<div class="cmd tooltips" style="margin-left:5px;display: #loadavg_display#;">
-			<span title="Charge système (load average)" class="fa techno-courbes3" style="width:15px"></span>
+			<span title="Charge système (load average)" class="fa techno-courbes3" style="width:15px;"></span>
 			<span id="loadavg1mn#id#"></span><span id="loadavg5mn#id#"></span><span id="loadavg15mn#id#"></span>
 	</div>
 	<script>
@@ -66,103 +66,326 @@
 			}
 		}
     </script>
-	<div class="cmd tooltips" style="margin-left:5px;display: #Mem_display#;">
-			<span title="Mémoire vive" class="fa techno-memory" style="width:15px"></span>
-			<span id="Mempourcent#id#"></span>
+	<div class="cmd tooltips" data-cmd_id="#DISK0id#" style="margin-left:5px;display: #DISK0_display#;">
+			<span title="Disque dur 0" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK0#id#"></span><span id="HEALTH0#id#"></span><span id="HOURS0#id#"></span><span id="TEMP0#id#"></span>
 	</div>
-	<script>
+	<div class="cmd tooltips" data-cmd_id="#DISK1id#" style="margin-left:5px;display: #DISK1_display#;">
+			<span title="Disque dur 1" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK1#id#"></span><span id="HEALTH1#id#"></span><span id="HOURS1#id#"></span><span id="TEMP1#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK2id#" style="margin-left:5px;display: #DISK2_display#;">
+			<span title="Disque dur 2" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK2#id#"></span><span id="HEALTH2#id#"></span><span id="HOURS2#id#"></span><span id="TEMP2#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK3id#" style="margin-left:5px;display: #DISK3_display#;">
+			<span title="Disque dur 3" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK3#id#"></span><span id="HEALTH3#id#"></span><span id="HOURS3#id#"></span><span id="TEMP3#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK4id#" style="margin-left:5px;display: #DISK4_display#;">
+			<span title="Disque dur 4" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK4#id#"></span><span id="HEALTH4#id#"></span><span id="HOURS4#id#"></span><span id="TEMP4#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK5id#" style="margin-left:5px;display: #DISK5_display#;">
+			<span title="Disque dur 5" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK5#id#"></span><span id="HEALTH5#id#"></span><span id="HOURS5#id#"></span><span id="TEMP5#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK6id#" style="margin-left:5px;display: #DISK6_display#;">
+			<span title="Disque dur 6" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK6#id#"></span><span id="HEALTH6#id#"></span><span id="HOURS6#id#"></span><span id="TEMP6#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK7id#" style="margin-left:5px;display: #DISK7_display#;">
+			<span title="Disque dur 7" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK7#id#"></span><span id="HEALTH7#id#"></span><span id="HOURS7#id#"></span><span id="TEMP7#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK8id#" style="margin-left:5px;display: #DISK8_display#;">
+			<span title="Disque dur 8" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK8#id#"></span><span id="HEALTH8#id#"></span><span id="HOURS8#id#"></span><span id="TEMP8#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK9id#" style="margin-left:5px;display: #DISK9_display#;">
+			<span title="Disque dur 9" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK9#id#"></span><span id="HEALTH9#id#"></span><span id="HOURS9#id#"></span><span id="TEMP9#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK10id#" style="margin-left:5px;display: #DISK10_display#;">
+			<span title="Disque dur 10" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK10#id#"></span><span id="HEALTH10#id#"></span><span id="HOURS10#id#"></span><span id="TEMP10#id#"></span>
+	</div>
+	<div class="cmd tooltips" data-cmd_id="#DISK11id#" style="margin-left:5px;display: #DISK11_display#;">
+			<span title="Disque dur 11" class="fas fa-hdd" style="width:15px;"></span>
+			<span id="DISK11#id#"></span><span id="HEALTH11#id#"></span><span id="HOURS11#id#"></span><span id="TEMP11#id#"></span>
+	</div>
+      	<script>
 		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
-			if ('#Mempourc#' == '') {
-				$('#Mempourcent#id#').append('<span>#Mem#</span>');
-			}else if ('#Mempourc#' > '#Mempourcvertsupa#' && '#Mempourcvertsupa#' != '') {
-				$('#Mempourcent#id#').append('#Mem# (<span style="color: #00FF00;" >#Mempourc#%</span>)');
-			}else if ('#Mempourc#' >= '#Mempourcorangede#' && '#Mempourc#' <= '#Mempourcorangea#') {
-				$('#Mempourcent#id#').append('#Mem# (<span style="color: #FF8000;" >#Mempourc#%</span>)');
-			}else if ('#Mempourc#' < '#Mempourcrougeinfa#') {
-				$('#Mempourcent#id#').append('#Mem# (<span style="color: #FF0000;" >#Mempourc#%</span>)');
-			}else {
-				$('#Mempourcent#id#').append('#Mem# (<span>#Mempourc#%</span>)');
-			}
+				$('#DISK0#id#').append("<span>#DISK0# </span>");
+				if ('#HEALTH0#' != '') {
+					if ('#HEALTH0#' == 'OK') {
+						$('#HEALTH0#id#').append(' : <span data-cmd_id="#HEALTH0id#" class="history cursor" style="color: #00FF00;" >#HEALTH0#</span>');
+					}else {
+						$('#HEALTH0#id#').append(' : <span data-cmd_id="#HEALTH0id#" class="history cursor" style="color: #FF0000;" >#HEALTH0#</span>');
+					}
+				}
+				$('#HOURS0#id#').append(' - <span>#HOURS0#</span> j ');          
+				if ('#TEMP0#' != '') {
+					if ('#TEMP0#' < '#TEMP0vertinfa#') {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #00FF00;" >#TEMP0#°C</span>)');
+					}else if ('#TEMP0#' >= '#TEMP0orangede#' && '#TEMP0#' <= '#TEMP0orangea#') {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #FF8000;" >#TEMP0#°C</span>)');
+					}else if ('#TEMP0#' > '#TEMP0rougesupa#' && '#TEMP0rougesupa#' != '') {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor" style="color: #FF0000;" >#TEMP0#°C</span>)');
+					}else {
+						$('#TEMP0#id#').append('(<span data-cmd_id="#TEMP0id#" class="history cursor">#TEMP0#°C</span>)');
+					}
+				}
+				$('#DISK1#id#').append('<span>#DISK1#</span>');
+				if ('#HEALTH1#' != '') {
+					if ('#HEALTH1#' == 'OK') {
+						$('#HEALTH1#id#').append(' : <span data-cmd_id="#HEALTH1id#" class="history cursor" style="color: #00FF00;" >#HEALTH1#</span>');
+					}else {
+						$('#HEALTH1#id#').append(' : <span data-cmd_id="#HEALTH1id#" class="history cursor" style="color: #FF0000;" >#HEALTH1#</span>');
+					}
+				}
+				$('#HOURS1#id#').append(' - <span>#HOURS1#</span> j ');          
+				if ('#TEMP1#' != '') {
+					if ('#TEMP1#' < '#TEMP1vertinfa#') {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #00FF00;" >#TEMP1#°C</span>)');
+					}else if ('#TEMP1#' >= '#TEMP1orangede#' && '#TEMP1#' <= '#TEMP1orangea#') {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #FF8000;" >#TEMP1#°C</span>)');
+					}else if ('#TEMP1#' > '#TEMP1rougesupa#' && '#TEMP1rougesupa#' != '') {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor" style="color: #FF0000;" >#TEMP1#°C</span>)');
+					}else {
+						$('#TEMP1#id#').append('(<span data-cmd_id="#TEMP1id#" class="history cursor">#TEMP1#°C</span>)');
+					}
+				}
+				$('#DISK2#id#').append('<span>#DISK2#</span>');
+				if ('#HEALTH2#' != '') {
+					if ('#HEALTH2#' == 'OK') {
+						$('#HEALTH2#id#').append(' : <span data-cmd_id="#HEALTH2id#" class="history cursor" style="color: #00FF00;" >#HEALTH2#</span>');
+					}else {
+						$('#HEALTH2#id#').append(' : <span data-cmd_id="#HEALTH2id#" class="history cursor" style="color: #FF0000;" >#HEALTH2#</span>');
+					}
+				}
+				$('#HOURS2#id#').append(' - <span>#HOURS2#</span> j ');          
+				if ('#TEMP2#' != '') {
+					if ('#TEMP2#' < '#TEMP2vertinfa#') {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #00FF00;" >#TEMP2#°C</span>)');
+					}else if ('#TEMP2#' >= '#TEMP2orangede#' && '#TEMP2#' <= '#TEMP2orangea#') {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #FF8000;" >#TEMP2#°C</span>)');
+					}else if ('#TEMP2#' > '#TEMP2rougesupa#' && '#TEMP2rougesupa#' != '') {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor" style="color: #FF0000;" >#TEMP2#°C</span>)');
+					}else {
+						$('#TEMP2#id#').append('(<span data-cmd_id="#TEMP2id#" class="history cursor">#TEMP2#°C</span>)');
+					}
+				}
+				$('#DISK3#id#').append('<span>#DISK3#</span>');
+				if ('#HEALTH3#' != '') {
+					if ('#HEALTH3#' == 'OK') {
+						$('#HEALTH3#id#').append(' : <span data-cmd_id="#HEALTH3id#" class="history cursor" style="color: #00FF00;" >#HEALTH3#</span>');
+					}else {
+						$('#HEALTH3#id#').append(' : <span data-cmd_id="#HEALTH3id#" class="history cursor" style="color: #FF0000;" >#HEALTH3#</span>');
+					}
+				}
+				$('#HOURS3#id#').append(' - <span>#HOURS3#</span> j ');          
+				if ('#TEMP3#' != '') {
+					if ('#TEMP3#' < '#TEMP3vertinfa#') {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #00FF00;" >#TEMP3#°C</span>)');
+					}else if ('#TEMP3#' >= '#TEMP3orangede#' && '#TEMP3#' <= '#TEMP3orangea#') {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #FF8000;" >#TEMP3#°C</span>)');
+					}else if ('#TEMP3#' > '#TEMP3rougesupa#' && '#TEMP3rougesupa#' != '') {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor" style="color: #FF0000;" >#TEMP3#°C</span>)');
+					}else {
+						$('#TEMP3#id#').append('(<span data-cmd_id="#TEMP3id#" class="history cursor">#TEMP3#°C</span>)');
+					}
+				}
+				$('#DISK4#id#').append('<span>#DISK4#</span>');
+				if ('#HEALTH4#' != '') {
+					if ('#HEALTH4#' == 'OK') {
+						$('#HEALTH4#id#').append(' : <span data-cmd_id="#HEALTH4id#" class="history cursor" style="color: #00FF00;" >#HEALTH4#</span>');
+					}else {
+						$('#HEALTH4#id#').append(' : <span data-cmd_id="#HEALTH4id#" class="history cursor" style="color: #FF0000;" >#HEALTH4#</span>');
+					}
+				}
+				$('#HOURS4#id#').append(' - <span>#HOURS4#</span> j ');          
+				if ('#TEMP4#' != '') {
+					if ('#TEMP4#' < '#TEMP4vertinfa#') {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #00FF00;" >#TEMP4#°C</span>)');
+					}else if ('#TEMP4#' >= '#TEMP4orangede#' && '#TEMP4#' <= '#TEMP4orangea#') {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #FF8000;" >#TEMP4#°C</span>)');
+					}else if ('#TEMP4#' > '#TEMP4rougesupa#' && '#TEMP4rougesupa#' != '') {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor" style="color: #FF0000;" >#TEMP4#°C</span>)');
+					}else {
+						$('#TEMP4#id#').append('(<span data-cmd_id="#TEMP4id#" class="history cursor">#TEMP4#°C</span>)');
+					}
+				}
+				$('#DISK5#id#').append('<span>#DISK5#</span>');
+				if ('#HEALTH5#' != '') {
+					if ('#HEALTH5#' == 'OK') {
+						$('#HEALTH5#id#').append(' : <span data-cmd_id="#HEALTH5id#" class="history cursor" style="color: #00FF00;" >#HEALTH5#</span>');
+					}else {
+						$('#HEALTH5#id#').append(' : <span data-cmd_id="#HEALTH5id#" class="history cursor" style="color: #FF0000;" >#HEALTH5#</span>');
+					}
+				}
+				$('#HOURS5#id#').append(' - <span>#HOURS5#</span> j ');          
+				if ('#TEMP5#' != '') {
+					if ('#TEMP5#' < '#TEMP5vertinfa#') {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #00FF00;" >#TEMP5#°C</span>)');
+					}else if ('#TEMP5#' >= '#TEMP5orangede#' && '#TEMP5#' <= '#TEMP5orangea#') {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #FF8000;" >#TEMP5#°C</span>)');
+					}else if ('#TEMP5#' > '#TEMP5rougesupa#' && '#TEMP5rougesupa#' != '') {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor" style="color: #FF0000;" >#TEMP5#°C</span>)');
+					}else {
+						$('#TEMP5#id#').append('(<span data-cmd_id="#TEMP5id#" class="history cursor">#TEMP5#°C</span>)');
+					}
+				}
+				$('#DISK6#id#').append('<span>#DISK6#</span>');
+				if ('#HEALTH6#' != '') {
+					if ('#HEALTH6#' == 'OK') {
+						$('#HEALTH6#id#').append(' : <span data-cmd_id="#HEALTH6id#" class="history cursor" style="color: #00FF00;" >#HEALTH6#</span>');
+					}else {
+						$('#HEALTH6#id#').append(' : <span data-cmd_id="#HEALTH6id#" class="history cursor" style="color: #FF0000;" >#HEALTH6#</span>');
+					}
+				}
+				$('#HOURS6#id#').append(' - <span>#HOURS6#</span> j ');          
+				if ('#TEMP6#' != '') {
+					if ('#TEMP6#' < '#TEMP6vertinfa#') {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor" style="color: #00FF00;" >#TEMP6#°C</span>)');
+					}else if ('#TEMP6#' >= '#TEMP6orangede#' && '#TEMP6#' <= '#TEMP6orangea#') {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor" style="color: #FF8000;" >#TEMP6#°C</span>)');
+					}else if ('#TEMP6#' > '#TEMP6rougesupa#' && '#TEMP6rougesupa#' != '') {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor" style="color: #FF0000;" >#TEMP6#°C</span>)');
+					}else {
+						$('#TEMP6#id#').append('(<span data-cmd_id="#TEMP6id#" class="history cursor">#TEMP6#°C</span>)');
+					}
+				}
+				$('#DISK7#id#').append('<span>#DISK7#</span>');
+				if ('#HEALTH7#' != '') {
+					if ('#HEALTH7#' == 'OK') {
+						$('#HEALTH7#id#').append(' : <span data-cmd_id="#HEALTH7id#" class="history cursor" style="color: #00FF00;" >#HEALTH7#</span>');
+					}else {
+						$('#HEALTH7#id#').append(' : <span data-cmd_id="#HEALTH7id#" class="history cursor" style="color: #FF0000;" >#HEALTH7#</span>');
+					}
+				}
+				$('#HOURS7#id#').append(' - <span>#HOURS7#</span> j ');          
+				if ('#TEMP7#' != '') {
+					if ('#TEMP7#' < '#TEMP7vertinfa#') {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor" style="color: #00FF00;" >#TEMP7#°C</span>)');
+					}else if ('#TEMP7#' >= '#TEMP7orangede#' && '#TEMP7#' <= '#TEMP7orangea#') {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor" style="color: #FF8000;" >#TEMP7#°C</span>)');
+					}else if ('#TEMP7#' > '#TEMP7rougesupa#' && '#TEMP7rougesupa#' != '') {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor" style="color: #FF0000;" >#TEMP7#°C</span>)');
+					}else {
+						$('#TEMP7#id#').append('(<span data-cmd_id="#TEMP7id#" class="history cursor">#TEMP7#°C</span>)');
+					}
+				}
+				$('#DISK8#id#').append('<span>#DISK8#</span>');
+				if ('#HEALTH8#' != '') {
+					if ('#HEALTH8#' == 'OK') {
+						$('#HEALTH8#id#').append(' : <span data-cmd_id="#HEALTH8id#" class="history cursor" style="color: #00FF00;" >#HEALTH8#</span>');
+					}else {
+						$('#HEALTH8#id#').append(' : <span data-cmd_id="#HEALTH8id#" class="history cursor" style="color: #FF0000;" >#HEALTH8#</span>');
+					}
+				}
+				$('#HOURS8#id#').append(' - <span>#HOURS8#</span> j ');          
+				if ('#TEMP8#' != '') {
+					if ('#TEMP8#' < '#TEMP8vertinfa#') {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor" style="color: #00FF00;" >#TEMP8#°C</span>)');
+					}else if ('#TEMP8#' >= '#TEMP8orangede#' && '#TEMP8#' <= '#TEMP8orangea#') {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor" style="color: #FF8000;" >#TEMP8#°C</span>)');
+					}else if ('#TEMP8#' > '#TEMP8rougesupa#' && '#TEMP8rougesupa#' != '') {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor" style="color: #FF0000;" >#TEMP8#°C</span>)');
+					}else {
+						$('#TEMP8#id#').append('(<span data-cmd_id="#TEMP8id#" class="history cursor">#TEMP8#°C</span>)');
+					}
+				}
+				$('#DISK9#id#').append('<span>#DISK9#</span>');
+				if ('#HEALTH9#' != '') {
+					if ('#HEALTH9#' == 'OK') {
+						$('#HEALTH9#id#').append(' : <span data-cmd_id="#HEALTH9id#" class="history cursor" style="color: #00FF00;" >#HEALTH9#</span>');
+					}else {
+						$('#HEALTH9#id#').append(' : <span data-cmd_id="#HEALTH9id#" class="history cursor" style="color: #FF0000;" >#HEALTH9#</span>');
+					}
+				}
+				$('#HOURS9#id#').append(' - <span>#HOURS9#</span> j ');          
+				if ('#TEMP9#' != '') {
+					if ('#TEMP9#' < '#TEMP9vertinfa#') {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor" style="color: #00FF00;" >#TEMP9#°C</span>)');
+					}else if ('#TEMP9#' >= '#TEMP9orangede#' && '#TEMP9#' <= '#TEMP9orangea#') {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor" style="color: #FF8000;" >#TEMP9#°C</span>)');
+					}else if ('#TEMP9#' > '#TEMP9rougesupa#' && '#TEMP9rougesupa#' != '') {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor" style="color: #FF0000;" >#TEMP9#°C</span>)');
+					}else {
+						$('#TEMP9#id#').append('(<span data-cmd_id="#TEMP9id#" class="history cursor">#TEMP9#°C</span>)');
+					}
+				}
+				$('#DISK10#id#').append('<span>#DISK10#</span>');
+				if ('#HEALTH10#' != '') {
+					if ('#HEALTH10#' == 'OK') {
+						$('#HEALTH10#id#').append(' : <span data-cmd_id="#HEALTH10id#" class="history cursor" style="color: #00FF00;" >#HEALTH10#</span>');
+					}else {
+						$('#HEALTH10#id#').append(' : <span data-cmd_id="#HEALTH10id#" class="history cursor" style="color: #FF0000;" >#HEALTH10#</span>');
+					}
+				}
+				$('#HOURS10#id#').append(' - <span>#HOURS10#</span> j ');          
+				if ('#TEMP10#' != '') {
+					if ('#TEMP10#' < '#TEMP10vertinfa#') {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor" style="color: #00FF00;" >#TEMP10#°C</span>)');
+					}else if ('#TEMP10#' >= '#TEMP10orangede#' && '#TEMP10#' <= '#TEMP10orangea#') {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor" style="color: #FF8000;" >#TEMP10#°C</span>)');
+					}else if ('#TEMP10#' > '#TEMP10rougesupa#' && '#TEMP10rougesupa#' != '') {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor" style="color: #FF0000;" >#TEMP10#°C</span>)');
+					}else {
+						$('#TEMP10#id#').append('(<span data-cmd_id="#TEMP10id#" class="history cursor">#TEMP10#°C</span>)');
+					}
+				}
+				$('#DISK11#id#').append('<span>#DISK11#</span>');
+				if ('#HEALTH11#' != '') {
+					if ('#HEALTH11#' == 'OK') {
+						$('#HEALTH11#id#').append(' : <span data-cmd_id="#HEALTH11id#" class="history cursor" style="color: #00FF00;" >#HEALTH11#</span>');
+					}else {
+						$('#HEALTH11#id#').append(' : <span data-cmd_id="#HEALTH11id#" class="history cursor" style="color: #FF0000;" >#HEALTH11#</span>');
+					}
+				}
+				$('#HOURS11#id#').append(' - <span>#HOURS11#</span> j ');          
+				if ('#TEMP11#' != '') {
+					if ('#TEMP11#' < '#TEMP11vertinfa#') {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor" style="color: #00FF00;" >#TEMP11#°C</span>)');
+					}else if ('#TEMP11#' >= '#TEMP11orangede#' && '#TEMP11#' <= '#TEMP11orangea#') {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor" style="color: #FF8000;" >#TEMP11#°C</span>)');
+					}else if ('#TEMP11#' > '#TEMP11rougesupa#' && '#TEMP11rougesupa#' != '') {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor" style="color: #FF0000;" >#TEMP11#°C</span>)');
+					}else {
+						$('#TEMP11#id#').append('(<span data-cmd_id="#TEMP11id#" class="history cursor">#TEMP11#°C</span>)');
+					}
+				}
 		}
+
     </script>
 
-	<div class="cmd tooltips" style="margin-left:5px;display: #Mem_swap_display#;">
-			<span title="Mémoire Swap" class="fa fa-list-alt" style="width:15px"></span>
-			<span id="Mem_swap#id#"></span>
-	</div>
-	<script>
-		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
-			$('#Mem_swap#id#').append('<span>#Mem_swap#</span>');
-		}
-    </script>
-
-	<div class="cmd tooltips" style="margin-left:5px;display: #ethernet0_display#;">
-			<span title="Trafic réseau" class="fa techno-fleches" style="width:15px"></span>
-			<span id="ethernet0#id#"></span>
-	</div>
 	<script>
 		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
 			$('#ethernet0#id#').append('<span>#ethernet0#</span>');
 		}
     </script>
 
-	<div class="cmd tooltips" style="margin-left:5px;display: #hddused_display#;">
-			<span title="Espace disque" class="fas fa-hdd" style="width:15px"></span>
-			<span id="hddpourcused#id#"></span>
-	</div>
-	<script>
-    if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
-			if ('#hddpourcused#' == '') {
-				$('#hddpourcused#id#').append('<span></span>');
-			}else if ((parseInt('#hddpourcused#')) < (parseInt('#hddpourcusedvertinfa#'))) {
-				$('#hddpourcused#id#').append('Total : #hddtotal# - Utilisé : #hddused# (<span data-cmd_id="#hddpourcusedid#" class="history cursor" style="color: #00FF00;">#hddpourcused#%</span>)');
-			}else if ((parseInt('#hddpourcused#')) >= (parseInt('#hddpourcusedorangede#')) && (parseInt('#hddpourcused#')) <= (parseInt('#hddpourcusedorangea#'))) {
-				$('#hddpourcused#id#').append('Total : #hddtotal# - Utilisé : #hddused# (<span data-cmd_id="#hddpourcusedid#" class="history cursor" style="color: #FF8000;">#hddpourcused#%</span>)');
-			}else if ((parseInt('#hddpourcused#')) > (parseInt('#hddpourcusedrougesupa#')) && (parseInt('#hddpourcusedrougesupa#')) != '') {
-				$('#hddpourcused#id#').append('Total : #hddtotal# - Utilisé : #hddused# (<span data-cmd_id="#hddpourcusedid#" class="history cursor" style="color: #FF0000;">#hddpourcused#%</span>)');
-			}else {
-				$('#hddpourcused#id#').append('Total : #hddtotal# - Utilisé : #hddused# (<span data-cmd_id="#hddpourcusedid#" class="history cursor">#hddpourcused#%</span>)');
-			}
-		}
-    </script>
-	<div id="synovol2#id#"></div>
-	<script>
-    if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
-			if ('#synovolume2_display#' == 'OK'){
-				$('#synovol2#id#').append('<div id="synovol2#id#" class="tooltips" data-cmd_id="#hddpourcusedv2id#" style="margin-left:5px;display: #hddusedv2_display#;"><span title="Espace disque Volume 2 (Synology)" class="fa fa-hdd-o" style="width:15px"></span> <span id="hddpourcusedv2#id#"></span></div>');
-			}
-			if ('#hddpourcusedv2#' == '') {
-				$('#hddpourcusedv2#id#').append('<span></span>');
-			}else if ((parseInt('#hddpourcusedv2#')) < (parseInt('#hddpourcusedv2vertinfa#'))) {
-				$('#hddpourcusedv2#id#').append('Total : #hddtotalv2# - Utilisé : #hddusedv2# (<span data-cmd_id="#hddpourcusedv2id#" class="history cursor" style="color: #00FF00;">#hddpourcusedv2#%</span>)');
-			}else if ((parseInt('#hddpourcusedv2#')) >= (parseInt('#hddpourcusedv2orangede#')) && (parseInt('#hddpourcusedv2#')) <= (parseInt('#hddpourcusedv2orangea#'))) {
-				$('#hddpourcusedv2#id#').append('Total : #hddtotalv2# - Utilisé : #hddusedv2# (<span data-cmd_id="#hddpourcusedv2id#" class="history cursor" style="color: #FF8000;">#hddpourcusedv2#%</span>)');
-			}else if ((parseInt('#hddpourcusedv2#')) > (parseInt('#hddpourcusedv2rougesupa#')) && (parseInt('#hddpourcusedv2rougesupa#')) != '') {
-				$('#hddpourcusedv2#id#').append('Total : #hddtotalv2# - Utilisé : #hddusedv2# (<span data-cmd_id="#hddpourcusedv2id#" class="history cursor" style="color: #FF0000;">#hddpourcusedv2#%</span>)');
-			}else {
-				$('#hddpourcusedv2#id#').append('Total : #hddtotalv2# - Utilisé : #hddusedv2# (<span data-cmd_id="#hddpourcusedv2id#" class="history cursor">#hddpourcusedv2#%</span>)');
-			}
-		}
-	</script>
-	<div class="cmd tooltips" style="margin-left:5px;display: #cpu_display#;">
-			<span title="Nombre CPU, fréquence et température" class="fa techno-pc" style="width:15px"></span>
+
+	<div class="cmd tooltips" data-cmd_id="#cpu_tempid#" style="margin-left:5px;display: #cpu_display#;">
+			<span title="Nombre CPU, fréquence et température" class="fa techno-pc" style="width:15px;"></span>
 			<span id="cpu#id#"></span><span id="cpu_temp#id#"></span>
 	</div>
 	<script>
 		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
 			if ('#cpu_temp#' != '') {
-				if ('#cpu_temp#' < '#cpu_tempvertinfa#') {
+				if ('#cpu_temp#' < '#TEMPvertinfa#') {
 					$('#cpu#id#').append('<span>#cpu# </span>');
-					$('#cpu_temp#id#').append('(<span style="color: #00FF00;" >#cpu_temp#°C</span>)');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor" style="color: #00FF00;" >#cpu_temp#°C</span>)');
 				}else if ('#cpu_temp#' >= '#cpu_temporangede#' && '#cpu_temp#' <= '#cpu_temporangea#') {
 					$('#cpu#id#').append('<span>#cpu# </span>');
-					$('#cpu_temp#id#').append('(<span style="color: #FF8000;" >#cpu_temp#°C</span>)');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor" style="color: #FF8000;" >#cpu_temp#°C</span>)');
 				}else if ('#cpu_temp#' > '#cpu_temprougesupa#' && '#cpu_temprougesupa#' != '') {
 					$('#cpu#id#').append('<span>#cpu# </span>');
-					$('#cpu_temp#id#').append('(<span style="color: #FF0000;" >#cpu_temp#°C</span>)');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor" style="color: #FF0000;" >#cpu_temp#°C</span>)');
 				}else {
 					$('#cpu#id#').append('<span>#cpu# </span>');
-					$('#cpu_temp#id#').append('(<span>#cpu_temp#°C</span>)');
+					$('#cpu_temp#id#').append('(<span data-cmd_id="#cpu_tempid#" class="history cursor">#cpu_temp#°C</span>)');
 				}
 			}else {
 			$('#cpu#id#').append('<span>#cpu#</span>');
@@ -170,23 +393,19 @@
 		}
 
     </script>
-	<div class="cmd tooltips" style="margin-left:5px;display: #perso1_display#;">
-			<span title="#nameperso1#" style="width:15px">#iconeperso1#</span>
+	<div class="cmd tooltips" data-cmd_id="#perso1id#" style="margin-left:5px;display: #perso1_display#;">
+			<span class="fa" title="#nameperso1#" style="width: 15px;max-width: 15px;max-height: 15px;">#iconeperso1#</span>
 			<span id="uniteperso1#id#"></span>
 	</div>
 	<script>
 		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
-			$('#uniteperso1#id#').append('<span>#perso1##uniteperso1#</span>');
+			$('#uniteperso1#id#').append('<span data-cmd_id="#perso1id#" class="history cursor">#perso1##uniteperso1#</span>');
 		}
     </script>
 
-	<div class="cmd tooltips" style="margin-left:5px;display: #perso2_display#;">
-			<span title="#nameperso2#" style="width:15px">#iconeperso2#</span>
-			<span id="uniteperso2#id#"></span>
-	</div>
 	<script>
 		if ('#cnx_ssh#' == 'OK' || '#cnx_ssh#' == 'No') {
-			$('#uniteperso2#id#').append('<span>#perso2##uniteperso2#</span>');
+			$('#uniteperso2#id#').append('<span data-cmd_id="#perso2id#" class="history cursor">#perso2##uniteperso2#</span>');
 		}
     </script>
 
